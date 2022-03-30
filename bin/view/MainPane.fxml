@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="568.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="569.0" prefWidth="793.0">
+         <top>
+            <MenuBar fx:id="mainMenuBar" prefHeight="28.0" prefWidth="694.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="newMenuButton" mnemonicParsing="false" onAction="#newMenuButtonPressed" text="New" />
+                    <MenuItem fx:id="openMenuButton" mnemonicParsing="false" onAction="#openMenuButtonPressed" text="Open" />
+                        <MenuItem fx:id="closeMenuButton" mnemonicParsing="false" onAction="#closeMenuButtonPressed" text="Close" />
+                        <MenuItem fx:id="saveMenuButton" mnemonicParsing="false" onAction="#saveMenuButtonPressed" text="Save" />
+                        <MenuItem fx:id="saveAsMenuButton" mnemonicParsing="false" onAction="#saveAsMenuButtonPressed" text="Save As" />
+                        <MenuItem fx:id="exitMenuButton" mnemonicParsing="false" onAction="#exitMenuButtonPressed" text="Exit" />
+                        <MenuItem fx:id="spellCheckMenuButton" mnemonicParsing="false" onAction="#spellCheckMenuButtonPressed" text="Spell-Check" />
+                        <MenuItem fx:id="learnMenuButton" mnemonicParsing="false" onAction="#learnMenuButtonPressed" text="Learn" />
+                        <MenuItem fx:id="createMenuButton" mnemonicParsing="false" onAction="#createMenuButtonPressed" text="Create" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="undoMenuButton" mnemonicParsing="false" onAction="#undoMenuButtonPressed" text="Undo" />
+                        <MenuItem fx:id="wordCountMenuButton" mnemonicParsing="false" onAction="#wordCountMenuButtonPressed" text="Word Count" />
+                        <MenuItem fx:id="sentenceCountMenuButton" mnemonicParsing="false" onAction="#sentenceCountMenuButtonPressed" text="Sentence Count" />
+                        <MenuItem fx:id="SyllableCountMenuButton" mnemonicParsing="false" onAction="#SyllableCountMenuButtonPressed" text="Syllable Count" />
+                        <MenuItem fx:id="fleschScoreMenuButton" mnemonicParsing="false" onAction="#fleschScoreMenuButtonPressed" text="Flesch Score" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TextArea fx:id="textAreaEntry" onInputMethodTextChanged="#onEditTextAreaChanged" onKeyPressed="#onEditTextAreaEntry" prefHeight="450.0" prefWidth="793.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </center>
+         <bottom>
+            <TextArea fx:id="statusBar" editable="false" prefHeight="88.0" prefWidth="766.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
